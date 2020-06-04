@@ -11,6 +11,20 @@ class Navbar extends React.Component {
     if (user) {
       return (
         <Menu.Menu position='right'>
+          <Link to='/old-form'>
+            <Menu.Item
+              id='oposts'
+              name='Old Posts'
+              active={location.pathname === '/old-form'}
+            />
+          </Link>
+          <Link to='/young-form'>
+            <Menu.Item
+              id='yposts'
+              name='Young Posts'
+              active={location.pathname === '/young-form'}
+            />
+          </Link>
           <Menu.Item
             name='logout'
             onClick={() => handleLogout(this.props.history)}
@@ -42,19 +56,19 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu stackable>
+        <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item
               name='home'
               id='home'
-              active={this.props.location.pathname === '/old'}
+              active={this.props.location.pathname === '/home'}
             />
           </Link>
           <Link to='/young'>
             <Menu.Item
               name='young'
               id='young'
-              active={this.props.location.pathname === '/old'}
+              active={this.props.location.pathname === '/young'}
             />
           </Link>
           <Link to='/old'>

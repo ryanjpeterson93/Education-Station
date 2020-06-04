@@ -12,7 +12,8 @@ import FetchUser from "./components/FetchUser";
 import ProtectedRoute from './components/ProtectedRoute';
 import AboutKits from "./components/AboutKits";
 import AboutBeth from "./components/AboutBeth";
-
+import OldForm from "./components/OldForm";
+import YoungForm from "./components/YoungForm"
 
 const App = () => (
   <div>
@@ -20,7 +21,6 @@ const App = () => (
     <FetchUser>
       <Container>
         <Switch>
-        {/* <ProtectedRoute exact path="/" component={Home} /> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
@@ -28,6 +28,8 @@ const App = () => (
           <Route exact path="/old" component={Old} />
           <Route exact path="/kits" component={AboutKits} />
           <Route exact path="/beth" component={AboutBeth} />
+          <ProtectedRoute exact path="/young-form" component={YoungForm} />
+          <ProtectedRoute exact path="/old-form" component={OldForm} />
           <Route component={NoMatch} />
         </Switch>
       </Container>

@@ -1,0 +1,2 @@
+class Ypost < ApplicationRecord
+end
