@@ -4,16 +4,16 @@ import { Menu, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
-  
+
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
-    
+
     if (user) {
       return (
         <Menu.Menu position='right'>
           <Menu.Item
             name='logout'
-            onClick={ () => handleLogout(this.props.history) }
+            onClick={() => handleLogout(this.props.history)}
           />
         </Menu.Menu>
       )
@@ -38,19 +38,47 @@ class Navbar extends React.Component {
       )
     }
   }
-  
+
   render() {
     return (
       <div>
-        <Menu pointing secondary>
+        <Menu stackable>
           <Link to='/'>
             <Menu.Item
               name='home'
               id='home'
-              active={this.props.location.pathname === '/'}
+              active={this.props.location.pathname === '/old'}
             />
           </Link>
-            { this.rightNavItems() }
+          <Link to='/young'>
+            <Menu.Item
+              name='young'
+              id='young'
+              active={this.props.location.pathname === '/old'}
+            />
+          </Link>
+          <Link to='/old'>
+            <Menu.Item
+              name='old'
+              id='old'
+              active={this.props.location.pathname === '/old'}
+            />
+          </Link>
+          <Link to='/kits'>
+            <Menu.Item
+              name='kits'
+              id='kits'
+              active={this.props.location.pathname === '/kits'}
+            />
+          </Link>
+          <Link to='/beth'>
+            <Menu.Item
+              name='About Beth'
+              id='beth'
+              active={this.props.location.pathname === '/beth'}
+            />
+          </Link>
+          {this.rightNavItems()}
         </Menu>
       </div>
     )
@@ -60,9 +88,9 @@ class Navbar extends React.Component {
 export class ConnectedNavbar extends React.Component {
   render() {
     return (
-      <AuthConsumer> 
-        { auth => 
-          <Navbar { ...this.props } auth={auth} />
+      <AuthConsumer>
+        {auth =>
+          <Navbar {...this.props} auth={auth} />
         }
       </AuthConsumer>
     )
