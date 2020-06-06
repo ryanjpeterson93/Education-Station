@@ -56,13 +56,14 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Menu pointing secondary>
+        <Menu secondary>
           <Link to='/'>
             <Menu.Item
-              name='home'
+            name='home'
               id='home'
               active={this.props.location.pathname === '/home'}
-            />
+            >
+            </Menu.Item>
           </Link>
           <Link to='/young'>
             <Menu.Item
@@ -92,7 +93,8 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/beth'}
             />
           </Link>
-          {this.rightNavItems()}
+        {/* <Menu.Item position='right' header>Miss Beth's Summer Fun Kits</Menu.Item> */}
+          {/* {this.rightNavItems()} */}
         </Menu>
       </div>
     )
