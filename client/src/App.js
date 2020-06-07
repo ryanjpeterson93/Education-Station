@@ -16,7 +16,7 @@ import OldForm from "./components/OldForm";
 import YoungForm from "./components/YoungForm"
 
 const App = () => (
-  <div>
+  <div className="app">
     <Navbar />
     <FetchUser>
       <Container>
