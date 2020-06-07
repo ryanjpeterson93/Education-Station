@@ -1,14 +1,10 @@
 import React from 'react';
-import { Header, Image } from 'semantic-ui-react';
-import styled from 'styled-components'
+import { Header} from 'semantic-ui-react';
 import logo from '../images/logo.PNG'
 
 const Home = () => (
   <>
-  <Image src={logo}></Image>
-  <div id="homepage">
-    <Header as="h3" textAlign="center">Education Station</Header>
-  </div>
+    <Header as="h3" textAlign="center">This is the homepage</Header>
   </>
 )
 

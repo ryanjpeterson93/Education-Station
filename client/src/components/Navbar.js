@@ -67,14 +67,14 @@ class Navbar extends React.Component {
           </Link>
           <Link to='/young'>
             <Menu.Item
-              name='young'
+              name="Juniors"
               id='young'
               active={this.props.location.pathname === '/young'}
             />
           </Link>
           <Link to='/old'>
             <Menu.Item
-              name='old'
+              name='Seniors'
               id='old'
               active={this.props.location.pathname === '/old'}
             />
@@ -93,7 +93,6 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/beth'}
             />
           </Link>
-        {/* <Menu.Item position='right' header>Miss Beth's Summer Fun Kits</Menu.Item> */}
           {/* {this.rightNavItems()} */}
         </Menu>
       </div>

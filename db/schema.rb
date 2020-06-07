@@ -55,3 +55,7 @@ ActiveRecord::Schema.define(version: 2020_06_04_211017) do
   end
 
 end
+
+This is one hun long This is one hun long This is one hun long This is one hun long This is one hun
+
+this is twenty long
