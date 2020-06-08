@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-import { Grid } from 'semantic-ui-react';
+import React from 'react';
+// import { Grid } from 'semantic-ui-react';
 import axios from 'axios';
-import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button, Accordion, Jumbotron } from 'react-bootstrap'
+import JuniorVideo from '../components/VideoModal'
 
 class Young extends React.Component {
   state = { yposts: [] };
@@ -14,73 +15,53 @@ class Young extends React.Component {
 
   renderPosts = () => {
     const { yposts } = this.state
-    const [smShow, setSmShow] = useState(false);
-    const [lgShow, setLgShow] = useState(false);
     return yposts.map(ypost =>
-      <div  >
-        <Col>
-          <Card key={ypost.id}>
-            <Card.Img src={ypost.photo} alt="Card image" />
-            <Card.ImgOverlay>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-              </Card.Text>
-              
-            </Card.ImgOverlay>
-            {/* <Card.Body> */}
-            <iframe
-              src={ypost.video}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen></iframe>
-            {/* </Card.Body> */}
-          </Card>
-
-          {/* 
-        <Grid >
-          <Grid.Row>
-            <Grid.Column width={16}>
-              <h2>{ypost.title}</h2>
-            </Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row stretched>
-            <Grid.Column width={10}>
-              <img className="postImage" src={ypost.photo} alt="No Image Right Now" />
-            </Grid.Column>
-            <Grid.Column width={6}>
-              <div className="postBody">
-                <p> {ypost.body} </p>
-
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row>
-            <Grid.Column width={8}>
-              <div className="postVideo">
-                <iframe 
-                src= {ypost.video} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen></iframe>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid> */}
-        </Col>
-      </div>
+      <>
+        <div className="postCard">
+          <Col>
+            <Card key={ypost.id}>
+              <Card.Img src={ypost.photo} alt="Card image" />
+              <Card.ImgOverlay>
+                <Card.Title>Card title</Card.Title>
+                <Card.Footer>
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+              </Card.Footer>
+              </Card.ImgOverlay>
+            </Card>
+            <Accordion>
+              {/* <Card> */}
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                View Video
+                    </Accordion.Toggle>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <iframe
+                    src={ypost.video}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen></iframe>
+                </Card.Body>
+              </Accordion.Collapse>
+              {/* </Card> */}
+            </Accordion>
+          </Col>
+        </div>
+      </>
     )
   }
 
   render() {
     return (
       <>
-        <div className="postHeader">
-          {/* <Header as="h3" textAlign="center">Here are some post and stuff</Header> */}
-        </div>
+          <Jumbotron fluid>
+            <Container>
+              <h1>3 - 5 Year Olds</h1>
+              <p>
+                Check out all of these posts about all the cool kits that I make for the younger kiddos!
+              </p>
+            </Container>
+          </Jumbotron>
         <Container fluid>
           <Row xs={1} sm={1} md={2} lg={3} xl={4}>
             {this.renderPosts()}

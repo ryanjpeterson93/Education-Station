@@ -5,8 +5,8 @@
  line-height: 2em;
 }
 
-.card {
-  margin-top: 2%;
+.postCard {
+  margin-top: 3%;
 }
 
 .postVideo {
@@ -41,4 +41,13 @@
 
 .carousel{
   height: 500px;
+}
+
+.accordion{
+  text-align: center;
+  cursor: pointer;
+}
+
+.postHeader {
+  text-align: center;
 }

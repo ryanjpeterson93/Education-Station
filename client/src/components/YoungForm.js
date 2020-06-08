@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header, Form, Button } from 'semantic-ui-react';
 import Dropzone from 'react-dropzone';
-import styled from 'styled-components';
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 // import { InputFile } from 'semantic-ui-react-input-file'
