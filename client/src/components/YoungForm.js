@@ -81,73 +81,54 @@ class YoungForm extends React.Component {
 
 
   render() {
-    const { title, body, video} = this.state;
+    const { title, body, video } = this.state;
     return (
       <>
         <Header as="h3" textAlign="center">Young Class Upload Form</Header>
-        <Form onSubmit={this.handleSubmit} >
-          <Form.Field>
-            <label>Title</label>
-            <input
-              name="title"
-              value={title}
-              placeholder="title"
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Body of Post</label>
-            <input
-              name="body"
-              value={body}
-              placeholder="body"
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Picture</label>
-            <Dropzone onDrop={this.onDrop} multiple={true}>
-              {({ getRootProps, getInputProps }) => (
-                <StyledDrop>
-                  <div {...getRootProps()}>
-                    <input {...getInputProps()} />
-                    <p>Drag or drop a picture of your home</p>
+        <div className="">
+          <Form onSubmit={this.handleSubmit} >
+            <Form.Field>
+              <label>Title</label>
+              <input
+                name="title"
+                value={title}
+                placeholder="title"
+                onChange={this.handleChange} />
+            </Form.Field>
+            <Form.Field>
+              <label>Body of Post</label>
+              <input
+                name="body"
+                value={body}
+                placeholder="body"
+                onChange={this.handleChange} />
+            </Form.Field>
+            <Form.Field>
+              <label>Picture</label>
+              <Dropzone onDrop={this.onDrop} multiple={true}>
+                {({ getRootProps, getInputProps }) => (
+                  < div className="styledDrop">
+                    <div {...getRootProps()}>
+                      <input {...getInputProps()} />
+                      <p>Click to add a photo, or drag photo here</p>
+                    </div>
                   </div>
-                </StyledDrop>
-              )}
-            </Dropzone>
-          </Form.Field>
-          <Form.Field>
-            <label>Video From Youtube</label>
-            <input
-              name="video"
-              value={video}
-              placeholder="video from youtube"
-              onChange={this.handleChange} />
-          </Form.Field>
-          {/* <Form.Field>
-          <input
-            type="file"
-            name="photo"
-            value={photo}
-            onChange={this.fileChange}
-            ref={this.fileInput}
-          />
-          </Form.Field> */}
-          <Button type='submit'>Submit</Button>
-        </Form>
+                )}
+              </Dropzone>
+            </Form.Field>
+            <Form.Field>
+              <label>Video From Youtube</label>
+              <input
+                name="video"
+                value={video}
+                placeholder="Make sure the link is the 'embed' link"
+                onChange={this.handleChange} />
+            </Form.Field>
+            <Button type='submit'>Submit</Button>
+          </Form>
+        </div>
       </>
     )
   }
 }
-
-const StyledDrop = styled.div`
-border: 2.5px dashed black;
-width: 200px;
-height: 200px;
-padding: 50px 10px;
-background: #e3e3e3;
-text-align: center;
-margin: 10px 10px;
-cursor: pointer;
-`
-
 export default YoungForm;

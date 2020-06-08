@@ -7,7 +7,6 @@ import Register from "./components/Register";
 import Young from "./components/Young";
 import Old from "./components/Old";
 import { Switch, Route } from "react-router-dom";
-import { Container } from "semantic-ui-react";
 import FetchUser from "./components/FetchUser";
 import ProtectedRoute from './components/ProtectedRoute';
 import AboutKits from "./components/AboutKits";
@@ -19,7 +18,7 @@ const App = () => (
   <div className="app">
     <Navbarr />
     <FetchUser>
-      <Container>
+      <>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -32,7 +31,7 @@ const App = () => (
           <ProtectedRoute exact path="/senior-form" component={OldForm} />
           <Route component={NoMatch} />
         </Switch>
-      </Container>
+      </>
     </FetchUser>
   </div>
 );
