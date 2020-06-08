@@ -45,7 +45,6 @@ class Navbarr extends React.Component {
           </Navbar.Collapse>
         </Navbar>
       </div>
-
     )
   }
 }
@@ -63,43 +62,3 @@ export class ConnectedNavbar extends React.Component {
 }
 
 export default withRouter(ConnectedNavbar);
-
-{/* <Menu secondary>
-          <Link to='/'>
-            <Menu.Item
-            name='home'
-              id='home'
-              active={this.props.location.pathname === '/home'}
-            >
-            </Menu.Item>
-          </Link>
-          <Link to='/young'>
-            <Menu.Item
-              name="Juniors"
-              id='young'
-              active={this.props.location.pathname === '/young'}
-            />
-          </Link>
-          <Link to='/old'>
-            <Menu.Item
-              name='Seniors'
-              id='old'
-              active={this.props.location.pathname === '/old'}
-            />
-          </Link>
-          <Link to='/kits'>
-            <Menu.Item
-              name='kits'
-              id='kits'
-              active={this.props.location.pathname === '/kits'}
-            />
-          </Link>
-          <Link to='/beth'>
-            <Menu.Item
-              name='About Beth'
-              id='beth'
-              active={this.props.location.pathname === '/beth'}
-            />
-          </Link>
-          {/* {this.rightNavItems()} */}
-// {/* </Menu> */ } * /}

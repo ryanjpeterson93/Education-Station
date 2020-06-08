@@ -1,6 +1,6 @@
 import React from "react"
 import axios from 'axios'
-import { Card, Button, Jumbotron } from 'react-bootstrap'
+import { Card, Button} from 'react-bootstrap'
 
 class SubmittedForms extends React.Component {
   state = { contacts: [] };

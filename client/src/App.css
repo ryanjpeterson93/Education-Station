@@ -14,7 +14,7 @@
 }
 
 .form {
-  width: 50%;
+  width: 90%;
   margin: auto;
   border: 1px solid black;
   padding: 3%;
@@ -39,8 +39,18 @@
   border-radius: 25px;
 }
 
-.carousel{
-  height: 500px;
+.carousel img{
+  opacity: .7;
+}
+
+.carousel h6{
+  color: black;
+  font-weight: 600;
+}
+
+.carousel h3{
+  color: black;
+  font-weight: bolder;
 }
 
 .accordion{

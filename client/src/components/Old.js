@@ -28,7 +28,6 @@ class Old extends React.Component {
               </Card.ImgOverlay>
             </Card>
             <Accordion>
-              {/* <Card> */}
               <Accordion.Toggle as={Card.Header} eventKey="0">
                 View Video
                     </Accordion.Toggle>
@@ -41,7 +40,6 @@ class Old extends React.Component {
                     allowFullScreen></iframe>
                 </Card.Body>
               </Accordion.Collapse>
-              {/* </Card> */}
             </Accordion>
           </Col>
         </div>

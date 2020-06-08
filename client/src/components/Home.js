@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Header, Container, Segment } from 'semantic-ui-react';
 import logo from '../images/logo.PNG'
+import kids1 from '../images/kids1.jpg'
+import kids2 from '../images/kids2.jpg'
+import kids3 from '../images/kids3.jpg'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Carousel from 'react-bootstrap/Carousel'
-
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -17,38 +19,38 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={logo}
+          src={kids1}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <div className="carDiv">
+            <h3>Wow, What a cool title!</h3>
+            <h6>Here is some really interesting text and such.</h6>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={logo}
+          src={kids2}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Wow, What a cool title!</h3>
+          <h6>Here is some really interesting text and such.</h6>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={logo}
+          src={kids3}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Wow, What a cool title!</h3>
+          <h6>Here is some really interesting text and such.</h6>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
@@ -57,30 +59,19 @@ function ControlledCarousel() {
 
 const Home = () => (
   <>
-<Jumbotron fluid>
-  <Container>
-    <h1>Fluid jumbotron</h1>
-    <p>
-      This is a modified jumbotron that occupies the entire horizontal space of
-      its parent.
+    <Jumbotron fluid>
+      <Container>
+        <h1>This will be the Home Page</h1>
+        <p>
+          We will totally be able to make it look however you want.
     </p>
-  </Container>
-</Jumbotron>
+      </Container>
+    </Jumbotron>
 
-<div className="carousel">
-{ControlledCarousel()}
-
-</div>
-
-
-    {/* // <Container fluid>
-    // <Segment inverted secondary color='teal'>Inverted content.</Segment>
-      // <div className="homeHeader">
-      //   <Header as="h1" textAlign="center">Welcome to Miss Beth's Creativity Kits</Header>
-      // </div>
-    // </Container> */}
-
-</>
+    <div className="carousel">
+      {ControlledCarousel()}
+    </div>
+  </>
 )
 
 export default Home;
