@@ -3,7 +3,6 @@ import { Header, Form, Button } from 'semantic-ui-react';
 import Dropzone from 'react-dropzone';
 import { Redirect } from "react-router-dom";
 import axios from "axios";
-// import { InputFile } from 'semantic-ui-react-input-file'
 
 class YoungForm extends React.Component {
   state = {
@@ -24,29 +23,6 @@ class YoungForm extends React.Component {
     console.log('files[0]', files[0])
     this.setState({ file: files[0] })
   };
-
-  // fileChange = e => {
-  //   this.setState({ file: e.target.files[0] }, () => {
-  //     console.log("File chosen --->", this.state.file);
-  //   });
-  // };
-
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const ypost = { ...this.state, };
-  //   axios.post("/api/yposts", ypost)
-  //     .then(res => {
-  //       console.log(res);
-  //       // this.props.history.push("/products");
-  //     })
-  //   this.setState({
-  //     title: "",
-  //     body: "",
-  //     photo: "",
-  //     video: "",
-  //     file: null,
-  //   });
-  // }
 
   handleSubmit = () => {
     let data = new FormData();
@@ -76,8 +52,6 @@ class YoungForm extends React.Component {
         console.log(err);
       });
   };
-
-
 
   render() {
     const { title, body, video } = this.state;

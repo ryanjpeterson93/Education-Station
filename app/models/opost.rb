@@ -1,0 +1,2 @@
+class Opost < ApplicationRecord
+end

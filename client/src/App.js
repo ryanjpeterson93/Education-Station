@@ -13,6 +13,7 @@ import AboutKits from "./components/AboutKits";
 import AboutBeth from "./components/AboutBeth";
 import OldForm from "./components/OldForm";
 import YoungForm from "./components/YoungForm"
+import ContactForm from "./components/ContactForm"
 
 const App = () => (
   <div className="app">
@@ -27,6 +28,7 @@ const App = () => (
           <Route exact path="/senior" component={Old} />
           <Route exact path="/kits" component={AboutKits} />
           <Route exact path="/beth" component={AboutBeth} />
+          <Route exact path="/contact" component={ContactForm} />
           <ProtectedRoute exact path="/junior-form" component={YoungForm} />
           <ProtectedRoute exact path="/senior-form" component={OldForm} />
           <Route component={NoMatch} />

@@ -1,8 +1,6 @@
 import React from 'react';
-// import { Grid } from 'semantic-ui-react';
 import axios from 'axios';
-import { Container, Row, Col, Card, Button, Accordion, Jumbotron } from 'react-bootstrap'
-import JuniorVideo from '../components/VideoModal'
+import { Container, Row, Col, Card, Accordion, Jumbotron } from 'react-bootstrap'
 
 class Young extends React.Component {
   state = { yposts: [] };
@@ -68,12 +66,8 @@ class Young extends React.Component {
           </Row>
         </Container>
       </>
-
-
-
     )
   }
-
 }
 
 export default Young;
