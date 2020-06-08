@@ -50,6 +50,7 @@ class ContactForm extends React.Component {
             <Form.Field>
               <label>Name</label>
               <input
+                required
                 name="name"
                 value={name}
                 placeholder="name"
@@ -58,6 +59,7 @@ class ContactForm extends React.Component {
             <Form.Field>
               <label>Phone Number</label>
               <input
+                required
                 name="phone"
                 value={phone}
                 placeholder="ex: 801-111-2222"
@@ -66,6 +68,7 @@ class ContactForm extends React.Component {
             <Form.Field>
               <label>Body</label>
               <input
+                required
                 name="body"
                 value={body}
                 placeholder="Type out a short message with any questions you may have"
@@ -74,6 +77,7 @@ class ContactForm extends React.Component {
             <Form.Field>
               <label>Email Address</label>
               <input
+                required
                 name="email"
                 value={email}
                 placeholder="email"

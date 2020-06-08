@@ -12,7 +12,7 @@ class Navbarr extends React.Component {
       return (
         <Nav>
           <NavDropdown title="For Mermz" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="">Submitted Forms</NavDropdown.Item>
+            <NavDropdown.Item href="/submitted-forms">Submitted Forms</NavDropdown.Item>
             <NavDropdown.Item href="/senior-form">Senior Posts</NavDropdown.Item>
             <NavDropdown.Item href="/junior-form">Junior Posts</NavDropdown.Item>
             <NavDropdown.Divider />
